@@ -237,9 +237,7 @@ class AllureFormatter implements Formatter
 
   public function onAfterSuiteTested(AfterSuiteTested $event)
   {
-    AnnotationProvider::registerAnnotationNamespaces();
     $this->getLifeCycle()->fire(new TestSuiteFinishedEvent($this->uuid));
-
   }
 
   public function onBeforeFeatureTested(BeforeFeatureTested $event)
